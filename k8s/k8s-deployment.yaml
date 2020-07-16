@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: gradle-webapp
+  namespace: testbed
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: gradle-webapp
+  template:
+    metadata:
+      labels:
+        app: gradle-webapp
+    spec:
+      containers:
+        - name: gradle-webapp
+          image: freeson01/project-repo:gradle-webapp
+          ports:
+            - containerPort: 8080
+          imagePullPolicy: Always
+          env:
+            - name: DATE
+              value: 'DATE_STRING'
+      imagePullSecrets:
+        - name: my-secret
