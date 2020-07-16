@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: gradle-webapp
-          image: freeson01/project-repo:gradle-webapp
+          image: freeson01/pipeline-repo:gradle-webapp
           ports:
             - containerPort: 8080
           imagePullPolicy: Always

@@ -1,5 +1,5 @@
 /* pipeline 변수 설정 */
-def DOCKER_IMAGE_NAME = "freeson01/project-repo"           // 생성하는 Docker image 이름
+def DOCKER_IMAGE_NAME = "freeson01/pipeline-repo"           // 생성하는 Docker image 이름
 def DOCKER_IMAGE_TAGS = "gradle-webapp"  // 생성하는 Docker image 태그
 def NAMESPACE = "testbed"
 def VERSION = "${env.BUILD_NUMBER}"
